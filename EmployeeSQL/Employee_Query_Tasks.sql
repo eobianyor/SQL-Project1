@@ -74,3 +74,15 @@ SELECT last_name, COUNT(last_name) AS last_name_count
 FROM "Employee"
 Group by last_name
 Order by last_name_count DESC;
+
+-- Epilogue Task
+-- "Search your ID number." You look down at your badge to see that your employee ID number is 499942.
+SELECT *
+FROM "Employee"
+JOIN "Salaries"
+  ON "Employee".emp_no = "Salaries".emp_no
+JOIN "Dept_emp"
+  ON "Employee".emp_no = "Dept_emp".emp_no
+JOIN "Department"
+  ON "Department".dept_no = "Dept_emp".dept_no
+WHERE "Employee".emp_no = 499942;

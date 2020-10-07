@@ -1,14 +1,7 @@
--- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
+﻿-- Exported from QuickDBD: https://www.quickdatabasediagrams.com/
 -- Link to schema: https://app.quickdatabasediagrams.com/#/d/jCWWo0
 -- NOTE! If you have used non-SQL datatypes in your design, you will have to change these here.
 
--- DROP TABLE "Salaries"
--- DROP TABLE "salaries"
--- DROP TABLE "Department"
--- DROP TABLE "Dept_manager"
--- DROP TABLE "Dept_emp"
--- DROP TABLE "Employee"
--- DROP TABLE "Title";
 
 CREATE TABLE "Title" (
     "title_id" Varchar   NOT NULL,
@@ -72,10 +65,3 @@ REFERENCES "Employee" ("emp_no");
 ALTER TABLE "Dept_emp" ADD CONSTRAINT "fk_Dept_emp_dept_no" FOREIGN KEY("dept_no")
 REFERENCES "Department" ("dept_no");
 
--- INSERT CSVs HERE
-
--- QC QUERY
-
-SELECT * FROM "Employee"
-
--- END
